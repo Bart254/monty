@@ -61,6 +61,7 @@ void sub(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void _div(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 void confirm(int n, unsigned int line_number);
 void push_err_message(int line_number);
 void malloc_err_message(void);
