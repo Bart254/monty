@@ -13,13 +13,10 @@ void push(stack_t **stack, unsigned int line_number)
 	int number;
 
 	(void)stack;
-	new = malloc(sizeof(stack_t));
-	if (new == NULL)
-		malloc_err_message();
 	if (vars.number)
 	{
 		number = atoi(vars.number);
-		if (number == 0 && (strcmp(vars.number, "0") != 0 ||
+		if (number == 0 && (strcmp(vars.number, "0") != 0 &&
 				strcmp(vars.number, "-0") != 0))
 		{
 			_free();
@@ -31,6 +28,9 @@ void push(stack_t **stack, unsigned int line_number)
 		_free();
 		push_err_message(line_number);
 	}
+	new = malloc(sizeof(stack_t));
+	if (new == NULL)
+		malloc_err_message();
 	new->n = number;
 	new->next = vars.top;
 	new->prev = NULL;

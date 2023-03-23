@@ -24,7 +24,7 @@ void execute(char *opcode, unsigned int line_number)
 		}
 		e++;
 	}
-	_free();
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+	_free();
 	exit(EXIT_FAILURE);
 }

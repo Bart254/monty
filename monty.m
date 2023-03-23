@@ -1,6 +1,2 @@
-				push 3
-                               push           5
-push                                    7
-
-           		                   
+             push                                 hjnbj-8
 pall
