@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "monty.h"
 
 /**
  * push_err_message - displays an error message
@@ -7,6 +8,7 @@
  */
 void push_err_message(int line_number)
 {
+	_free();
 	fprintf(stderr, "L%d: usage: push integer\n", line_number);
 	exit(EXIT_FAILURE);
 }
@@ -26,6 +28,7 @@ void open_err_message(char *filename)
  */
 void malloc_err_message(void)
 {
+	_free();
 	fprintf(stderr, "Error: malloc failed\n");
 	exit(EXIT_FAILURE);
 }

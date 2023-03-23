@@ -10,7 +10,8 @@
  */
 void execute(char *opcode, unsigned int line_number)
 {
-	instruction_t func[] = {{"push", push}, {"pall", pall}, {NULL, NULL}};
+	instruction_t func[] = {{"push", push}, {"pall", pall},
+		{"pint", pint}, {"pop", pop}, {NULL, NULL}};
 	int e = 0;
 
 	if (opcode == NULL)

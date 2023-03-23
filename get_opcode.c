@@ -5,7 +5,7 @@
 
 /**
  * get_opcode - gets code the from a file
- * @full_command: file stream
+ * @full_command: file stream command
  *
  * The function gets the stack/queue command passed into a file
  * and return the command to the main function after making

@@ -26,7 +26,7 @@ int main(int ac, char **av)
 		open_err_message(av[1]);
 	vars.top = NULL;
 	vars.full_command = NULL;
-	while (getline(&(vars.full_command), &n, vars.stream) != EOF)
+	while (getline(&vars.full_command, &n, vars.stream) != EOF)
 	{
 		++line_number;
 		monty.opcode = get_opcode(vars.full_command);
