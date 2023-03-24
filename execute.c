@@ -13,7 +13,8 @@ void execute(char *opcode, unsigned int line_number)
 	instruction_t func[] = {{"push", push}, {"pall", pall},
 		{"pint", pint}, {"pop", pop}, {"add", add}, {"sub", sub},
 		{"div", _div}, {"mul", mul}, {"mod", mod}, {"nop", nop},
-		{"swap", swap}, {NULL, NULL}};
+		{"swap", swap}, {"pchar", pchar}, {"pstr", pstr}, {"rotl", rotl},
+		{"rotr", rotr}, {"stack", stack}, {"queue", queue}, {NULL, NULL}};
 	int e = 0;
 
 	if (opcode == NULL)

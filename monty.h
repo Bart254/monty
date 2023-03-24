@@ -40,12 +40,14 @@ typedef struct instruction_s
  * @number: number to be pushed to stack/queue
  * @full_command: command passed to file
  * @stream: monty file with monty commands
+ * @mode: behaviour of data as either queue or stack
  */
 typedef struct global_v
 {
 	stack_t *top;
 	char *number;
 	char *full_command;
+	char *mode;
 	FILE *stream;
 } global_t;
 void open_err_message(char *filename);
@@ -62,6 +64,12 @@ void mul(stack_t **stack, unsigned int line_number);
 void _div(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
+void rotr(stack_t **stack, unsigned int line_number);
+void queue(stack_t **stack, unsigned int line_number);
+void stack(stack_t **stack, unsigned int line_number);
 void confirm(int n, unsigned int line_number);
 void push_err_message(int line_number);
 void malloc_err_message(void);

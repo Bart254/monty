@@ -32,6 +32,8 @@ void push(stack_t **stack, unsigned int line_number)
 	if ((*stack) != NULL)
 		(*stack)->prev = new;
 	(*stack) = new;
+	if (strcmp(vars.mode, "queue") == 0)
+		rotl(&vars.top, line_number);
 }
 
 /**
